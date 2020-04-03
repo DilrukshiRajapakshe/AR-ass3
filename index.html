@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- include A-Frame obviously -->
+ <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+ <!-- include ar.js for A-Frame -->
+ <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+ <a-scene embedded arjs>
+ <a-assets>
+	<!-- ShetlandBoat20K.obj used by K.N.B. Kudawithana -->
+	<a-asset-item id="tree-obj" src="ShetlandBoat20K.obj"></a-asset-item>
+	
+	<!-- 13637_Triceratops_Skull_Fossil_v1_L2.obj used by N.A.B.D. Nishshanka -->
+	<a-asset-item id="tree-obj1" src="13637_Triceratops_Skull_Fossil_v1_L2.obj"></a-asset-item>
+	
+	<!-- 13634_AmmoniteFossil_v1_l2.obj used by U.L.N.P. Uswatte -->
+	<a-asset-item id="tree-obj2" src="13634_AmmoniteFossil_v1_l2.obj"></a-asset-item>
+	
+	<!-- 1970.16 Neck Amphora 100K.obj used by D.D.S. Rajapakshe -->
+	<a-asset-item id="tree-obj3" src="1970.16 Neck Amphora 100K.obj"></a-asset-item>
+ </a-assets>
+ 
+	<!-- pattern-nb png used by K.N.B. Kudawithana -->
+	<a-marker preset='custom' type='pattern' url='pattern-nb.patt'>
+ 
+		<a-entity obj-model="obj: #tree-obj;" material="src: ShetlandBoat4K_albedo.png" position="0 0 -1" rotation="270 0 0" scale="0.3 0.3 0.3">
+		</a-entity></a-entity>
+	   
+		<a-text value="Venus, a Shetland fourareen" position="-0.8 0.5 0" rotation="0 0 0" scale="0.5 0.5 1.2"></a-text>
+		<a-text value="K.N.B.Kudawithana" position="-0.8 0.3 0" rotation="0 0 0" scale="0.5 0.5 1.2"></a-text>
+	
+	</a-marker>
+	
+	<!-- pattern-download used by N.A.B.D. Nishshanka -->
+	<a-marker preset='custom' type='pattern' url='pattern-download.patt'>
+	
+		<a-text value="Triceratops Skull Fossil" position="-0.8 0.5 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-text>
+		<a-text value="N.A.B.D. Nishshanka" position="-0.8 0.3 0"  rotation="0 0 0" scale="0.5 0.5 0.5"></a-text> 
+		
+		<a-entity obj-model="obj: #tree-obj1;" material="src: 13637_Triceratops_Skull_Fossil_diff.jpg" position="0 0 -1" rotation="-90 180 180" scale="0.025 0.025 0.025"></a-entity>
+		
+	</a-marker>  
+				
+	<!-- pattern-logo used by U.L.N.P. Uswatte -->
+	
+	<a-marker preset='custom' type='pattern' url='pattern-logo.patt'>
+	
+		<a-entity obj-model="obj: #tree-obj2;" material="src: 13634_AmmoniteFossil_diffuse.jpg" position="0 0 -1" rotation="90 30 30" scale="0.02 0.02 0.02">
+		</a-entity>
+		
+		<a-text value="AmmoniteFossil" color="red" position="-0.8 0.5 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-text>
+		<a-text value="U.L.N.P. Uswatte" color="red" position="-0.8 0.3 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-text>
+
+	</a-marker>
+	
+	<!-- pattern-apple used by D.D.S. Rajapakshe -->
+	
+	<a-marker preset='custom' type='pattern' url='pattern-apple.patt'>
+		
+		<a-text value="Neck Amphora (515-510 BC)" position="-0.8 0.5 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-text>
+		<a-text value="D.D.S Rajapakshe (IT16234062)" position="-0.8 0.3 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-text>
+		
+		<a-entity obj-model="obj: #tree-obj3;" material="src: 1970.16 Neck Amphora 100K_colour.png"  position="0 0 -1" rotation="0 0 0" scale="0.03 0.03 0.03">
+		</a-entity></a-entity>
+				
+	</a-marker>
+	
+	<a-entity camera></a-entity>
+ </a-scene>
+</body>
+</html>
